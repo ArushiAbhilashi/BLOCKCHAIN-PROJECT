@@ -1,0 +1,27 @@
+pragma solidity ^0.4.17<0.6.12;
+contract ReportCard{
+    string public Name;
+    uint public RollNo;
+    string public Batch;
+    string public  marks_maths;
+    string public marks_english;
+    string public marks_physics;
+    string public marks_chemistry;
+    bool public status;
+    
+    function ReportCard(string newName, uint newRollNo, string newBatch, string NewMarks_maths, string NewMarks_english, string NewMarks_physics,string Newmarks_chemistry,bool NewStatus)public{
+        Name=newName;
+        RollNo=newRollNo;
+        Batch=newBatch;
+        marks_maths=NewMarks_maths;
+        marks_english=NewMarks_english;
+        marks_physics=NewMarks_physics;
+        marks_chemistry=Newmarks_chemistry;
+        status=NewStatus;
+    }
+    
+    function getDetails()public view returns(string ,uint,string,string,string,string,string,bool){
+        return(Name,RollNo,Batch,marks_maths,marks_english,marks_physics,marks_chemistry,status);
+        
+    }
+    }
